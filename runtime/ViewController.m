@@ -83,6 +83,8 @@
         [self.navigationController pushViewController:controller animated:YES];
         
     } else if (indexPath.row == 4) {
+        //为category添加属性
+        //查看文件 NSArray+Person.m 文件
         NSArray *array = @[@"Magic", @"Unique"];
         Person *person = [Person new];
         array.person = person;
