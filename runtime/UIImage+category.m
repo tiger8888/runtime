@@ -10,6 +10,7 @@
 #import <objc/runtime.h>
 
 @implementation UIImage (category)
+
 + (UIImage *)new_imageNamed:(NSString *)name {
     NSLog(@"方法名称%s,%@", __func__, name);
     //在这重新给字符串name赋值，从而改变图片文件

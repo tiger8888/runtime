@@ -69,8 +69,6 @@
     if (indexPath.row == 0) {
         //发送消息
         [self sendMessage];
-        //交换类方法
-        [self changeMethod];
     } else if (indexPath.row == 1) {
         //获取Person类的所有属性和变量
         [self getPersonAllVaribal];
@@ -99,17 +97,6 @@
 - (void)sendMessage {
     Person *person = [[Person alloc] init];
     objc_msgSend(person, @selector(instanceRun));
-}
-
-#pragma mark - 交换方法
-- (void)changeMethod {
-    [Person classRun];
-    [Person classStudy];     //更换之前的方法
-    Method methodClassStudy = class_getClassMethod([Person class], @selector(classStudy));
-    Method methodClassRun = class_getClassMethod([Person class], @selector(classRun));
-    method_exchangeImplementations(methodClassStudy, methodClassRun);
-    [Person classRun];
-    [Person classStudy];     //更换后的方法
 }
 
 #pragma mark - 获取Person类的所有属性和变量
