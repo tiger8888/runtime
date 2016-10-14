@@ -17,6 +17,7 @@
 		C70F53E71DB0C78A008FBD98 /* UIImage+category.m in Sources */ = {isa = PBXBuildFile; fileRef = C70F53E61DB0C78A008FBD98 /* UIImage+category.m */; };
 		C70F53EF1DB0D017008FBD98 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C70F53EE1DB0D017008FBD98 /* ViewController.m */; };
 		C70F53F21DB0DFFC008FBD98 /* UIImageChangeMethodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C70F53F11DB0DFFC008FBD98 /* UIImageChangeMethodViewController.m */; };
+		C70F53F81DB11595008FBD98 /* NSArray+Person.m in Sources */ = {isa = PBXBuildFile; fileRef = C70F53F71DB11595008FBD98 /* NSArray+Person.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		C70F53EE1DB0D017008FBD98 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C70F53F01DB0DFFC008FBD98 /* UIImageChangeMethodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageChangeMethodViewController.h; sourceTree = "<group>"; };
 		C70F53F11DB0DFFC008FBD98 /* UIImageChangeMethodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageChangeMethodViewController.m; sourceTree = "<group>"; };
+		C70F53F61DB11595008FBD98 /* NSArray+Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Person.h"; sourceTree = "<group>"; };
+		C70F53F71DB11595008FBD98 /* NSArray+Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Person.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,8 @@
 				C70F53F11DB0DFFC008FBD98 /* UIImageChangeMethodViewController.m */,
 				C70F53E21DB09113008FBD98 /* Person.h */,
 				C70F53E31DB09113008FBD98 /* Person.m */,
+				C70F53F61DB11595008FBD98 /* NSArray+Person.h */,
+				C70F53F71DB11595008FBD98 /* NSArray+Person.m */,
 				C70F53BB1DB090EA008FBD98 /* Assets.xcassets */,
 				C70F53BD1DB090EA008FBD98 /* LaunchScreen.storyboard */,
 				C70F53C01DB090EA008FBD98 /* Info.plist */,
@@ -285,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C70F53F21DB0DFFC008FBD98 /* UIImageChangeMethodViewController.m in Sources */,
+				C70F53F81DB11595008FBD98 /* NSArray+Person.m in Sources */,
 				C70F53EF1DB0D017008FBD98 /* ViewController.m in Sources */,
 				C70F53E71DB0C78A008FBD98 /* UIImage+category.m in Sources */,
 				C70F53B41DB090EA008FBD98 /* AppDelegate.m in Sources */,

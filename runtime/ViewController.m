@@ -12,6 +12,7 @@
 #import <objc/runtime.h>
 #import "UIImage+category.h"
 #import "UIImageChangeMethodViewController.h"
+#import "NSArray+Person.h"
 
 #define VIEW_WIDTH self.view.frame.size.width
 #define VIEW_HEIGHT self.view.frame.size.height
@@ -82,7 +83,10 @@
         [self.navigationController pushViewController:controller animated:YES];
         
     } else if (indexPath.row == 4) {
-        
+        NSArray *array = @[@"Magic", @"Unique"];
+        Person *person = [Person new];
+        array.person = person;
+        NSLog(@"为category添加属性：%@", array.person);
     } else if (indexPath.row == 5) {
         
     } else if (indexPath.row == 6) {
