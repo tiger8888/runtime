@@ -85,7 +85,7 @@
         
         	//使用KVC直接进行赋值
         	[user setValue:value forKey:ivarName];
-    		}
-    		return user;
+    	    }
+    	return user;
 	}
 
