@@ -91,7 +91,7 @@
         array.person = person;
         NSLog(@"为category添加属性：%@", array.person);
     } else if (indexPath.row == 5) {
-        NSString *dictionary = @{@"name": @"heyuanbo",@"as":@"www", @"homeAddress": @"China", @"weight":@120};
+        NSString *dictionary = @{@"name": @"heyuanbo",@"as":@"www", @"homeAddress": @"China", @"weight":@120, @"user":@{@"name":@"fengmeiling"}};
         User *user = [User exchangeUserModelWithDictionary:dictionary];
         NSLog(@"%@,%@,%@,%@,%@", user, user.name, user.homeAddress, user.age, user.weight);
     } else if (indexPath.row == 6) {
