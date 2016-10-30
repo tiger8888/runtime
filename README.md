@@ -1,5 +1,8 @@
 # ios-runtime
 
+如有任何问题和错误，请联系 heyuanbo11@163.com
+
+
 ##发送消息
     #pragma mark - 发送消息
 	- (void)sendMessage {
@@ -55,10 +58,7 @@
 	}
 
 ##字典转Model
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
 	+(User *)exchangeUserModelWithDictionary:(NSDictionary *)dict {
     
     	User *user = [[self alloc] init];
@@ -71,11 +71,7 @@
         	NSString *ivarName = [NSString stringWithUTF8String:ivar_getName(ivar)];
         	//获取到每一个属性的名字，然后去掉前面的下划线
         	ivarName = [ivarName substringFromIndex:1];
-<<<<<<< HEAD
        	NSLog(@"%@", ivarName);
-=======
-        	NSLog(@"%@", ivarName);
->>>>>>> origin/master
         
         	id value = dict[ivarName];
         	//判断value是不是字典
@@ -92,13 +88,8 @@
         
         	//使用KVC直接进行赋值
         	[user setValue:value forKey:ivarName];
-<<<<<<< HEAD
-    	}
-    	return user;
-	}
-=======
+
     	 }
     	return user;
 	}
 
->>>>>>> origin/master
