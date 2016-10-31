@@ -2,15 +2,24 @@
 
 如有任何问题和错误，请联系 heyuanbo11@163.com
 
+##runtime的重要作用：
 
-##发送消息
+- 获取类的所有属性和类型：方便归档和解档，要不然得根据每个属性一个一个的归档，如果属性发生变化，那么如果归档方法不进行相应的改动就会崩溃，而如果使用runtime获取到所有的属性，那么就可以避免这种情况
+- 交换方法：如果我们一直在使用的某个方法，之后需求发生变化，在方法中要进行一些设置，那么我们可以重写一个方法，然后交换新旧方法，方便改动。
+- 为分类增加属性
+- 字典转模型：MJExtension、YYModel都是要用这个
+- 动态增加方法
+- 实现万能控制器的跳转：就是根据推送消息进来的页面需要变化
+
+##runtime使用
+###发送消息
     #pragma mark - 发送消息
 	- (void)sendMessage {
     	Person *person = [[Person alloc] init];
     	objc_msgSend(person, @selector(instanceRun));
 	}
 
-##获取类的所有属性和变量
+###获取类的所有属性和变量
 	#pragma mark - 获取Person类的所有属性和变量
 	- (void)getPersonAllVaribal {
     	unsigned int outCount = 0;
@@ -28,7 +37,7 @@
     	}
 	}
 
-##获取类的所有方法
+###获取类的所有方法
 	#pragma mark - 获取Person类的方法
 	- (void)getPersonMethod {
     	unsigned int outCount = 0;
@@ -41,7 +50,7 @@
     	}
 	}
 
-##交换方法、拦截系统方法
+###交换方法、拦截系统方法
 	+ (UIImage *)new_imageNamed:(NSString *)name {
     	NSLog(@"方法名称%s,%@", __func__, name);
     	//在这重新给字符串name赋值，从而改变图片文件
@@ -57,7 +66,7 @@
     	method_exchangeImplementations(method1, method2);
 	}
 
-##字典转Model
+###字典转Model
 
 	+(User *)exchangeUserModelWithDictionary:(NSDictionary *)dict {
     
