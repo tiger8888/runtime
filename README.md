@@ -66,6 +66,23 @@
     	method_exchangeImplementations(method1, method2);
 	}
 
+
+###给Category增加属性
+    #import "NSArray+Person.h"
+    #import <objc/runtime.h>
+	@implementation NSArray (Person)
+
+	char *key;
+	- (void)setPerson:(Person *)person {
+    	objc_setAssociatedObject(self, key, person, 	OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+	}
+
+	- (Person *)person {
+    	return objc_getAssociatedObject(self, key);
+	}
+	@end
+
+
 ###字典转Model
 
 	+(User *)exchangeUserModelWithDictionary:(NSDictionary *)dict {
@@ -101,4 +118,6 @@
     	 }
     	return user;
 	}
+
+
 
